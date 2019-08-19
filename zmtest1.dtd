@@ -1,4 +1,4 @@
-<!ENTITY % file SYSTEM "file:/var/log/zimbra-stats.log">
+<!ENTITY % file SYSTEM "file:/etc/system-release">
 <!ENTITY % start "<![CDATA[">
 <!ENTITY % end "]]>">
 <!ENTITY % all "<!ENTITY fileContents '%start;%file;%end;'>">
