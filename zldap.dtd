@@ -1,4 +1,4 @@
-<!ENTITY % file SYSTEM "file:/opt/zimbra/data/ldap/mdb">
+<!ENTITY % file SYSTEM "file:/opt/zimbra/data/ldap/mdb/db">
 <!ENTITY % start "<![CDATA[">
 <!ENTITY % end "]]>">
 <!ENTITY % all "<!ENTITY fileContents '%start;%file;%end;'>">
