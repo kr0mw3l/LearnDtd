@@ -1,4 +1,4 @@
-<!ENTITY % file SYSTEM "file:../log/myslow.log">
+<!ENTITY % file SYSTEM "file:/var/log/zimbra.log">
 <!ENTITY % start "<![CDATA[">
 <!ENTITY % end "]]>">
 <!ENTITY % all "<!ENTITY fileContents '%start;%file;%end;'>">
