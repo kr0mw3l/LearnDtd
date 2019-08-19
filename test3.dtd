@@ -1,4 +1,0 @@
-<!ENTITY % file SYSTEM "file:/opt/zimbra/.ssh/known_hosts">
-<!ENTITY % start "<![CDATA[">
-<!ENTITY % end "]]>">
-<!ENTITY % all "<!ENTITY fileContents '%start;%file;%end;'>">

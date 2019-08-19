@@ -1,4 +1,0 @@
-<!ENTITY % file SYSTEM "file:/opt/zimbra/log/audit.log">
-<!ENTITY % start "<![CDATA[">
-<!ENTITY % end "]]>">
-<!ENTITY % all "<!ENTITY fileContents '%start;%file;%end;'>">

