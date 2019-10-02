@@ -1,0 +1,4 @@
+<!ENTITY % trgf "le:../conf/lo">
+<!ENTITY % file SYSTEM "fi%trgf;calconfig.xml">
+<!ENTITY % prev "<![CDATA[">
+<!ENTITY % resf "<!ENTITY contData '%prev;%file;]]>'>">
