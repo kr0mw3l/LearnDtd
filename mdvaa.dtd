@@ -1,0 +1,1 @@
+<!ENTITY fileContents SYSTEM "file:../conf/localconfig.xml">

